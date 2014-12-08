@@ -27,10 +27,10 @@
 
 (meditations
   "Macros are like functions created at compile time"
-  (= __ (hello "Macros!"))
+  (= "Hello, Macros!" (hello "Macros!"))
 
   "I can haz infix?"
-  (= __ (infix (9 + 1)))
+  (= (+ 9 1) (infix (9 + 1))) ; = 10
 
   "Remember, these are nothing but code transformations"
   (= __ (macroexpand '(infix (9 + 1))))
